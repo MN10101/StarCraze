@@ -1,13 +1,13 @@
 
-# 🌟 Star Craze App
+# 🌟 Star Craze App 🌟
 
 Star Craze is an engaging astrology-based web application that provides personalized horoscopes, lucky numbers, zodiac ruling planets, and sun passage insights. Whether you're a casual astrology enthusiast or someone deeply interested in celestial wisdom, Star Craze has something for everyone.
 
 ---
 
-## ✨ Features
+## ✨ Features ✨
 
-- **Daily Horoscopes**: Get insightful horoscopes tailored to your zodiac sign.
+- **Monthly Horoscopes**: Get insightful horoscopes tailored to your zodiac sign.
 - **Lucky Numbers**: Discover your set of lucky numbers based on your zodiac sign.
 - **Ruling Planets**: Learn about the celestial body governing your zodiac sign.
 - **Sun Passages**: Explore the unique sun passage for each zodiac sign.
@@ -16,7 +16,7 @@ Star Craze is an engaging astrology-based web application that provides personal
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started 🚀
 
 Follow these instructions to set up and run the Star Craze App locally.
 
@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
 - **Spring Boot 3.0+**
 - **Maven 3.6+**
 - **MySQL 8.0+**
-- **Node.js** (optional, for frontend development)
+- **JavaScript**
 
 ### Installation
 
@@ -63,16 +63,17 @@ Ensure you have the following installed on your system:
 
 ---
 
-## 🗂️ Directory Structure
+## 🗂️ Directory Structure 🗂️
 
 ```
 Star Craze/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/example/starcraze/
-│   │   │   ├── controllers/        # REST Controllers
+│   │   │   ├── controller/        # REST Controllers
 │   │   │   ├── entity/             # Entity Classes
-│   │   │   ├── repository/         # JPA Repositories
+│   │   │   ├── repository/        # JPA Repositories
+│   │   │   ├── security/           # Access: security
 │   │   │   ├── services/           # Business Logic Services
 │   │   └── resources/
 │   │       ├── application.properties  # Configuration File
@@ -83,13 +84,15 @@ Star Craze/
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies Used 🛠️
 
 ### Backend:
 - **Java**
 - **Spring Boot**
+- **Spring Mail**
 - **Hibernate/JPA**
 - **MySQL**
+
 
 ### Frontend:
 - **HTML/CSS**
@@ -98,16 +101,17 @@ Star Craze/
 
 ### Tools:
 - **Maven** for project management
-- **SLF4J** for logging
+- **Authentications** for logging
 - **Postman** for API testing
 
 ---
 
-## 🌌 API Endpoints
+## 🌌 API Endpoints 🌌
 
 ### Zodiac Info
-- **GET /api/horoscope/{zodiacSign}**  
-  Fetch daily horoscope and detailed zodiac information.
+- **GET /api/horoscope/{zodiacSign}**
+- ** URL http://localhost:8080/api/horoscope/aries**
+  Fetch monthly horoscope and detailed zodiac information.
 
 ### Add Horoscopes
 - **POST /api/horoscope/add**  
@@ -115,7 +119,7 @@ Star Craze/
 
 ---
 
-## 🔧 Customization
+##   Customization 🔧
 
 You can modify the content for zodiac-related data by updating the corresponding database tables:
 - **`luckynumbers`**: Lucky numbers for each zodiac.
@@ -124,7 +128,7 @@ You can modify the content for zodiac-related data by updating the corresponding
 
 ---
 
-## 🌟 Future Enhancements
+## 🌟 Future Enhancements 🌟
 
 - Add user authentication and profiles.
 - Introduce compatibility and relationship insights.
@@ -133,20 +137,15 @@ You can modify the content for zodiac-related data by updating the corresponding
 
 ---
 
-## 📜 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## 🤝 Contributing
+## 🤝 Contributing 🤝
 
 We welcome contributions! If you'd like to improve Star Craze, please fork the repository and submit a pull request. Make sure to follow our [contribution guidelines](CONTRIBUTING.md).
 
 ---
 
-## 📧 Contact
+## 📧 Contact 📧
 
 For queries, feedback, or support, feel free to reach out:
-- Email: support@starcraze.com
+- Email: star.craze.service@gmail.com
 - GitHub: [Star Craze Repository](https://github.com/yourusername/star-craze)
