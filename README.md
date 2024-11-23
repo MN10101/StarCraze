@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
 - **Spring Boot 3.0+**
 - **Maven 3.6+**
 - **MySQL 8.0+**
-- **Node.JS**
+- **Docker**
 
 ### Installation
 
