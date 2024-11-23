@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/font-awesome.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="path/to/flag-icon-css/css/flag-icon.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <script src="/JS/script.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@google-translate/web-component@1.2.0/index.mjs';
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>StarCraze</title>
+</head>
+
+<body class="">
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/mn">StarCraze</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-scroll-nav="0" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="1" href="#features">Zodiac Signs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="2" href="#fun-facts">Elements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="3" href="#gemstone">Gemstones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="4" href="#works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="5" href="#testimonials">Visitors Says</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="6" href="#faq">Queries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="7" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Logout link visible only if user is logged in -->
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Home Section Start -->
+    <section class="home d-flex align-items-center" id="home" data-scroll-index="0">
+        <div class="effect-wrap">
+            <i class="fas fa-plus effect effect-1"></i>
+            <i class="fas fa-plus effect effect-2"></i>
+            <i class="fas fa-circle-notch effect effect-3"></i>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="home-text">
+                        <h1>Star Craze</h1>
+                        <p>"StarCraze, a cutting-edge web application, redefines the horoscope experience, providing users with personalized insights and celestial guidance. Immerse yourself in a world where astrology meets innovation, offering a seamless blend of aesthetic zodiac galleries, engaging video content, and a user-friendly interface. StarCraze is your celestial companion, delivering horoscopes and more in a sophisticated, accessible manner. Explore the stars with us and unlock the secrets the cosmos holds for you."</p>
+                        <div class="home-btn">
+                            <a href="/ca" class="btn btn-1">Your Zodiac</a>
+                            <button type="button" class="btn btn-1 video-play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center justify-content-center">
+                    <div class="home-img">
+                        <div class="circle">
+                        </div>
+                        <img src="images/1.jpg" alt="mn App">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Section End -->
+
+<!--    &lt;!&ndash; Navbar &ndash;&gt;-->
+<!--    <nav class="navbar navbar-expand-lg fixed-top">-->
+<!--        <div class="container">-->
+<!--            <a class="navbar-brand" href="/mn">StarCraze</a>-->
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile"-->
+<!--                    aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <i class="fas fa-bars"></i>-->
+<!--            </button>-->
+
+<!--            <div class="collapse navbar-collapse" id="navbarNavMobile">-->
+<!--                <ul class="navbar-nav">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#home-section">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#features">Zodiac Signs</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#fun-facts">Elements</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#gemstone">Gemstones</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#contact">Contact</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--    &lt;!&ndash; Navbar End &ndash;&gt;-->
+<!--    &lt;!&ndash; Home Section &ndash;&gt;-->
+<!--    <section class="home d-flex align-items-center" id="home-section" data-scroll-index="0">-->
+<!--        <h1>Welcome to StarCraze</h1>-->
+<!--        <p>"Discover your celestial journey with personalized horoscopes and zodiac insights."</p>-->
+<!--        <div class="home-btn">-->
+<!--            <a href="/ca" class="btn btn-1">Your Zodiac</a>-->
+<!--            <button type="button" class="btn btn-1 video-play-btn">-->
+<!--                <i class="fas fa-play"></i>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; Home Section End &ndash;&gt;-->
+
+
+    <!-- Features Section Start -->
+    <button class="scroll-to-top"><i class="fa fa-arrow-up"></i></button>
+    <section class="features section-padding" id="features" data-scroll-index="1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Zodiac <span>Signs</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel features-carousel">
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Aries.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Taurus.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Gemini.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Cancer.png" alt="">
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Leo.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Virgo.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Libra.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Scorpio.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Sagittarius.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Capricor.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Aquarius.png" alt="">
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">
+                        </div>
+                        <img src="/Images/Pisces.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section End -->
+
+    <!-- Fun Facts Section Start -->
+    <section class="fun-facts section-padding" id="fun-facts" data-scroll-index="2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
+                    <div class="fun-facts-img">
+                        <img src="images/30.jpg" alt="fun facts">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <div class="section-title">
+                        <h2>The <span>Elements</span></h2>
+                    </div>
+                    <div class="fun-facts-text">
+                        <p></p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-1">
+                                    <h3>FIRE</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-2">
+                                    <h3>EARTH</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-3">
+                                    <h3>AIR</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-4">
+                                    <h3>WATER</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fun Facts Section End -->
+
+    <!-- Gemstones for Zodiac Signs Section Start -->
+    <section class="gemstones-section section-padding" id="gemstone"  data-scroll-index="3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Gemstones for Each <span>Zodiac Sign</span></h2>
+                        <p>Discover the gemstones that align with your sign and their powerful influence on your life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Aries -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Aries</h3>
+                        <img src="/Images/Diamond.png" alt="Aries Gemstone">
+                        <p><strong>Gemstone:</strong> Diamond</p>
+                        <p><strong>Effect:</strong> Increases courage, boosts self-confidence, and promotes clarity.</p>
+                        <p><strong>Influence:</strong> Strengthens leadership skills and helps achieve goals.</p>
+                    </div>
+                </div>
+                <!-- Taurus -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Taurus</h3>
+                        <img src="/Images/Emerald.webp" alt="Taurus Gemstone">
+                        <p><strong>Gemstone:</strong> Emerald</p>
+                        <p><strong>Effect:</strong> Brings peace, enhances love, and fosters emotional stability.</p>
+                        <p><strong>Influence:</strong> Helps in financial stability and personal growth.</p>
+                    </div>
+                </div>
+                <!-- Gemini -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Gemini</h3>
+                        <img src="/Images/Agate.webp" alt="Gemini Gemstone">
+                        <p><strong>Gemstone:</strong> Agate</p>
+                        <p><strong>Effect:</strong> Enhances mental clarity, focus, and creativity.</p>
+                        <p><strong>Influence:</strong> Encourages adaptability and communication skills.</p>
+                    </div>
+                </div>
+                <!-- Cancer -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Cancer</h3>
+                        <img src="/Images/Moonstone.webp" alt="Cancer Gemstone">
+                        <p><strong>Gemstone:</strong> Moonstone</p>
+                        <p><strong>Effect:</strong> Promotes intuition, emotional balance, and inner peace.</p>
+                        <p><strong>Influence:</strong> Strengthens family bonds and emotional healing.</p>
+                    </div>
+                </div>
+                <!-- Leo -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Leo</h3>
+                        <img src="/Images/Ruby.webp" alt="Leo Gemstone">
+                        <p><strong>Gemstone:</strong> Ruby</p>
+                        <p><strong>Effect:</strong> Boosts vitality, passion, and creativity.</p>
+                        <p><strong>Influence:</strong> Strengthens leadership qualities and encourages boldness.</p>
+                    </div>
+                </div>
+                <!-- Virgo -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Virgo</h3>
+                        <img src="/Images/Sapphire.jpg" alt="Virgo Gemstone">
+                        <p><strong>Gemstone:</strong> Sapphire</p>
+                        <p><strong>Effect:</strong> Enhances wisdom, communication, and promotes clarity of thought.</p>
+                        <p><strong>Influence:</strong> Encourages perfectionism and enhances analytical skills.</p>
+                    </div>
+                </div>
+                <!-- Libra -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Libra</h3>
+                        <img src="/Images/Opal.jpeg" alt="Libra Gemstone">
+                        <p><strong>Gemstone:</strong> Opal</p>
+                        <p><strong>Effect:</strong> Brings balance, harmony, and emotional healing.</p>
+                        <p><strong>Influence:</strong> Promotes fairness and helps in making difficult decisions.</p>
+                    </div>
+                </div>
+                <!-- Scorpio -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Scorpio</h3>
+                        <img src="/Images/Topaz.jpeg" alt="Scorpio Gemstone">
+                        <p><strong>Gemstone:</strong> Topaz</p>
+                        <p><strong>Effect:</strong> Boosts emotional strength and helps in self-reflection.</p>
+                        <p><strong>Influence:</strong> Enhances inner strength and encourages transformation.</p>
+                    </div>
+                </div>
+                <!-- Sagittarius -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Sagittarius</h3>
+                        <img src="/Images/Turquoise.jpg" alt="Sagittarius Gemstone">
+                        <p><strong>Gemstone:</strong> Turquoise</p>
+                        <p><strong>Effect:</strong> Enhances communication, creativity, and promotes wisdom.</p>
+                        <p><strong>Influence:</strong> Encourages exploration and provides mental clarity.</p>
+                    </div>
+                </div>
+                <!-- Capricorn -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Capricorn</h3>
+                        <img src="/Images/Garnet.png" alt="Capricorn Gemstone">
+                        <p><strong>Gemstone:</strong> Garnet</p>
+                        <p><strong>Effect:</strong> Increases motivation, boosts ambition, and provides stability.</p>
+                        <p><strong>Influence:</strong> Promotes hard work and personal success.</p>
+                    </div>
+                </div>
+                <!-- Aquarius -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Aquarius</h3>
+                        <img src="/Images/Amethyst.webp" alt="Aquarius Gemstone">
+                        <p><strong>Gemstone:</strong> Amethyst</p>
+                        <p><strong>Effect:</strong> Calms the mind, enhances creativity, and brings spiritual healing.</p>
+                        <p><strong>Influence:</strong> Strengthens intellectual abilities and intuition.</p>
+                    </div>
+                </div>
+                <!-- Pisces -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="gemstone-item">
+                        <h3>Pisces</h3>
+                        <img src="/Images/Aquamarine.jpeg" alt="Pisces Gemstone">
+                        <p><strong>Gemstone:</strong> Aquamarine</p>
+                        <p><strong>Effect:</strong> Increases emotional healing, boosts intuition, and calms the mind.</p>
+                        <p><strong>Influence:</strong> Encourages empathy and strengthens psychic abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gemstones for Zodiac Signs Section End -->
+
+
+    <!-- How It Works Section Start -->
+    <section class="how-it-works section-padding" id="works" data-scroll-index="4">>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>How It <span>Works</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">1</div>
+                        <h3>Enter your Birthdate</h3>
+                        <p>Use this formula "yyyy-MM-dd".</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">2</div>
+                        <h3>Your Zodiac</h3>
+                        <p>Know what your zodiac sign is.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">3</div>
+                        <h3>Element, Sun passing, Ruling Planet</h3>
+                        <p>Your Element and Sun Passing Through your zodiac and your Ruling Planet.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item">
+                        <div class="step">4</div>
+                        <h3>Monthly horoscopes</h3>
+                        <p>Enjoy your monthly horoscope!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How It Works Section End -->
+
+    <!-- Testimonials Section Start -->
+    <section class="testimonials section-padding" id="testimonials" data-scroll-index="5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Visitors <span>Says</span></h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional Row for Carousel items -->
+            <div class="row">
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="img-box">
+                            <img src="/Images/Fitness%20Trainer.webp" alt=""><i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Love visiting your site every day.</p>
+                        <h3>Sven Butlemmer</h3>
+                        <span>Fitness Trainer</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="img-box">
+                            <img src="/Images/UI.png" alt=""><i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Keep going and surprise me more.</p>
+                        <h3>Susan Davies</h3>
+                        <span>UI Designer</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="img-box">
+                            <img src="/Images/Photographer.webp" alt=""><i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Best website ever!</p>
+                        <h3>Robin Landchner</h3>
+                        <span>Photographer</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq section-padding" id="faq" data-scroll-index="6">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Frequently <span>Asked</span> Queries</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse-01">
+                                <h3>What is Astrology?</h3>
+                            </div>
+                            <div class="collapse show" id="collapse-01" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Astrology is a belief system that suggests a connection between the positions and movements of celestial bodies, such as planets and stars, and events on Earth, including human life and personality. It is often divided into different branches, with horoscopic astrology being one of the most well-known. In horoscopic astrology, an individual's birth chart, based on the positions of celestial bodies at the time of their birth, is used to interpret and predict various aspects of their life, personality, and destiny. While astrology has cultural and historical significance, it's important to note that it is not scientifically proven, and its principles are not universally accepted..</p>
+
+                                    <p>Our employees are breathtaking coders and have a very good eye for quality and
+                                        design. This unique combination of generalists and specialists is rarely found
+                                        in a company in Germany.</p>
+
+                                    <p>We calculate transparently, are personable, and treat all of our partners and
+                                        colleagues in an appreciative manner.</p>
+
+                                    <p>Our strengths lie in the area of IT services, programming, CMS (WordPress, TYPO3,
+                                        Jommla), web design, online shops, graphic and print design, SEO / SEM, GDPR,
+                                        PageSpeed and interfaces.
+
+                                        And we still walk the earth</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-bs-toggle="collapse"
+                                 data-bs-target="#collapse-02">
+                                <h3>Does Astrology helps?</h3>
+                            </div>
+                            <div class="collapse" id="collapse-02" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>The effectiveness of astrology is a subject of debate. Some people find personal meaning, insight, and guidance in astrological interpretations, particularly through horoscopes and birth charts. Astrology is often used as a tool for self-reflection, providing individuals with a framework to consider aspects of their personality, relationships, and life events. 😉</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-bs-toggle="collapse"
+                                 data-bs-target="#collapse-03">
+                                <h3>Astonomy scientists</h3>
+                            </div>
+                            <div class="collapse" id="collapse-03" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Astronomy scientists, or astronomers, are professionals who study celestial objects such as stars, planets, galaxies, and the broader universe. Unlike astrology, which is not considered a science, astronomy is a natural science that involves systematic observation, measurement, and analysis of celestial phenomena.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Contact Section Start -->
+    <section class="contact section-padding" id="contact" data-scroll-index="7">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Get In <span>Touch</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <div class="contact-info">
+                        <h3>For Any Queries and Support</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-location-arrow"></i>
+                            <h4>Company Location</h4>
+                            <p><a href="https://www.google.de/maps/place/M%C3%BCllenhoffstra%C3%9Fe,+10967+Berlin/@52.4877824,13.4250496,14z/data=!4m5!3m4!1s0x47a84fceb3d8be55:0x7bcfa72405e22bc3!8m2!3d52.4921847!4d13.4149182"
+                                  style="color: #7857fe;">Müllenhoffstraße, 10967 Berlin</a></p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Write to me at</h4>
+                            <p><a href="mailto:mn.de@outlook.com" style="color: #7857fe;">mn.de@outlook.com</a></p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Call me on</h4>
+                            <p><a href="tel:+4917671210192" style="color: #7857fe;">+49 176 71210192</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Email" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Phone" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Subject" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-2">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>About Us</h3>
+                        <p>Welcome to StarCraze,
+                            your personal portal to the captivating world of astrology!
+                            We're not just another horoscope app – we're your cosmic companion,
+                            guiding you through life's twists and turns with the wisdom of the stars</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+                            <li><a href="/latest-blogs">Latest Blogs</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#features">Zodiac Signs</a></li>
+                            <li><a href="#fun-facts">Elements</a></li>
+                            <li><a href="#gemstone">Gemstones</a></li>
+                            <li><a href="#works">How It Works</a></li>
+                            <li><a href="#testimonials">Visitors Says</a></li>
+                            <li><a href="#faq">Contact</a></li>
+                            <li><a href="#contact">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Social Pages</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/">Facebook</a></li>
+                            <li><a href="https://twitter.com/?lang=en">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <a href="https://mn10101.github.io/portfolio-mn/" target="_blank"><p class="copyright-text">&copy;2024 MNajmeh | All rights reserved. </p></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Toggle Section Start -light and dark mode -->
+    <div class="toggle-theme justify-content-center">
+        <i class="fas"></i>
+    </div>
+    <!-- Toggle Section End -->
+
+    <!-- Video Popup Start -->
+    <div class="video-popup">
+        <div class="video-popup-inner">
+            <i class="fas fa-times video-popup-close"></i>
+            <div class="iframe-box">
+                <video id="player-1" width="560" height="315" controls>
+                    <source src="/Video/rr.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- Video Popup End -->
+
+
+<!-- Bootstrap JS bundle start -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS bundle end -->
+
+<!-- Jquery bootstrap start -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<!-- Jquery bootstrap end-->
+
+<!-- Owl carousel js start -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Owl carousel js end -->
+
+<!-- ScrollIt Js Start -->
+<script src="js/scrollIt.min.js"></script>
+<!-- ScrollIt Js End -->
+
+<!-- External Js start -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- External Js end -->
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Sign Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/zodiac.css">
+</head>
+<body>
+<div class="container">
+    <h1>Zodiac Sign Calculator</h1>
+    <p class="lead">Find out your zodiac sign and its information.</p>
+    <form id="zodiac-form">
+        <label for="birthdate" class="form-label">Enter your birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" class="form-control" required>
+        <button type="submit" class="btn btn-primary mt-3">Calculate</button>
+    </form>
+    <div id="result" style="display: none;">
+        <h2>Your Zodiac Sign:</h2>
+        <h2></h2>
+        <p class="lead"></p>
+        <p>Element: <span id="element"></span></p>
+        <p>Lucky Numbers: <span id="luckyNumbers"></span></p>
+        <p>Zodiac Ruling Planets: <span id="rulingPlanets"></span></p>
+        <p>Zodiac Sun Passages: <span id="sunPassages"></span></p>
+        <p>Monthly Horoscope: <span id="horoscope"></span></p>
+        <a href="/mn" class="btn-back mt-3">Back Home</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('zodiac-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            var birthdate = document.getElementById('birthdate').value;
+            var zodiacSign = getZodiacSign(birthdate);
+            var element = getElement(zodiacSign);
+
+            try {
+                // Fetch zodiac information (lucky numbers, ruling planets, sun passages)
+                const zodiacInfoResponse = await fetch('/api/zodiac-info?zodiacSign=' + encodeURIComponent(zodiacSign.toLowerCase()));
+
+                // Fetch monthly horoscope
+                const horoscopeResponse = await fetch('/api/horoscope/' + encodeURIComponent(zodiacSign.toLowerCase()));
+
+                // Check if we are receiving proper responses from both endpoints
+                if (!zodiacInfoResponse.ok) {
+                    throw new Error('Server returned error code: ' + zodiacInfoResponse.status);
+                }
+
+                if (!horoscopeResponse.ok) {
+                    throw new Error('Server returned error code: ' + horoscopeResponse.status);
+                }
+
+                const contentTypeZodiacInfo = zodiacInfoResponse.headers.get('content-type');
+                const contentTypeHoroscope = horoscopeResponse.headers.get('content-type');
+
+                let zodiacInfo = { luckyNumbers: 'N/A', rulingPlanets: 'N/A', sunPassages: 'N/A' };
+                let horoscopeData = { horoscope: 'No horoscope available' };
+
+                // Handle JSON responses for zodiac info
+                if (contentTypeZodiacInfo && contentTypeZodiacInfo.includes('application/json')) {
+                    zodiacInfo = await zodiacInfoResponse.json();  // Parse JSON for zodiac info
+                }
+
+                // Handle JSON responses for horoscope
+                if (contentTypeHoroscope && contentTypeHoroscope.includes('application/json')) {
+                    horoscopeData = await horoscopeResponse.json();
+                }
+
+                // Update the UI only if valid data is available
+                var resultElement = document.getElementById('result');
+                if (resultElement) {
+                    resultElement.style.display = 'block';
+                    resultElement.querySelector('h2').textContent = "Your Zodiac Sign: " + zodiacSign;
+                    resultElement.querySelector('p.lead').textContent = "Here is your zodiac information:";
+
+                    // Display element
+                    resultElement.querySelector('#element').textContent = element;
+
+                    // Handle cases where data is missing or "N/A"
+                    resultElement.querySelector('#luckyNumbers').textContent = zodiacInfo.luckyNumbers !== 'N/A'
+                        ? zodiacInfo.luckyNumbers
+                        : 'Lucky Numbers not available at this time.';
+
+                    resultElement.querySelector('#rulingPlanets').textContent = zodiacInfo.rulingPlanets !== 'N/A'
+                        ? zodiacInfo.rulingPlanets
+                        : 'Ruling Planets information not available.';
+
+                    resultElement.querySelector('#sunPassages').textContent = zodiacInfo.sunPassages !== 'N/A'
+                        ? zodiacInfo.sunPassages
+                        : 'Sun Passages information not available.';
+
+                    // Display horoscope
+                    resultElement.querySelector('#horoscope').textContent = horoscopeData.horoscope
+                        ? horoscopeData.horoscope
+                        : 'Horoscope not available at this time.';
+                } else {
+                    console.error("Element with id 'result' not found.");
+                }
+            } catch (error) {
+                console.error('Error fetching zodiac info or horoscope:', error);
+                alert('Failed to fetch zodiac info or horoscope. Please try again later.');
+            }
+        });
+    });
+
+    function getZodiacSign(birthdate) {
+        var date = new Date(birthdate);
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+
+        if ((month == 1 && day <= 19) || (month == 12 && day >= 22)) {
+            return "Capricorn";
+        } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
+            return "Aquarius";
+        } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+            return "Pisces";
+        } else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
+            return "Aries";
+        } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+            return "Taurus";
+        } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+            return "Gemini";
+        } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+            return "Cancer";
+        } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+            return "Leo";
+        } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+            return "Virgo";
+        } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+            return "Libra";
+        } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+            return "Scorpio";
+        } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+            return "Sagittarius";
+        } else {
+            return "Unknown";
+        }
+    }
+
+    function getElement(zodiacSign) {
+        switch (zodiacSign) {
+            case "Aries":
+            case "Leo":
+            case "Sagittarius":
+                return "Fire";
+            case "Taurus":
+            case "Virgo":
+            case "Capricorn":
+                return "Earth";
+            case "Gemini":
+            case "Libra":
+            case "Aquarius":
+                return "Air";
+            case "Cancer":
+            case "Scorpio":
+            case "Pisces":
+                return "Water";
+            default:
+                return "Unknown";
+        }
+    }
+</script>
+
+</body>
+</html>

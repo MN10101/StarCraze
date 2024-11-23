@@ -1,0 +1,150 @@
+/* General body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative; /* Required for positioning pseudo-element */
+    overflow: hidden;
+    background: none; /* Remove direct background from the body */
+}
+
+/* Circular background pseudo-element */
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 111vmax; /* Ensures the circle always covers the screen */
+    height: 111vmax; /* Match height to width for a perfect circle */
+    background: url(../Images/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Make it a circle */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place it behind other elements */
+    animation: spin 20s linear infinite;
+}
+/* Keyframes for rotation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Centered container for the form */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(115, 105, 105, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    z-index: 1; /* Ensure it stays above the circular background */
+}
+
+/* Form heading */
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #4a90e2;
+    text-transform: uppercase;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+}
+
+form div {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+/* Footer link below the form */
+.form-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.form-footer a {
+    color: #4a90e2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+p[style="color:red;"] {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
