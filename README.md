@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
 - **Spring Boot 3.0+**
 - **Maven 3.6+**
 - **MySQL 8.0+**
-- **JavaScript**
+- **Node.JS**
 
 ### Installation
 
@@ -111,7 +111,7 @@ Star Craze/
 ### Zodiac Info
 - **GET /api/horoscope/{zodiacSign}**
 - ** URL http://localhost:8080/api/horoscope/aries**
-  Fetch monthly horoscope and detailed zodiac information.
+- Fetch monthly horoscope and detailed zodiac information.
 
 ### Add Horoscopes
 - **POST /api/horoscope/add**  
