@@ -149,3 +149,5 @@ We welcome contributions! If you'd like to improve Star Craze, please fork the r
 For queries, feedback, or support, feel free to reach out:
 - Email: star.craze.service@gmail.com
 - GitHub: [Star Craze Repository](https://github.com/yourusername/star-craze)
+
+https://github.com/user-attachments/assets/b9b014a8-3017-4d28-8012-d45a7f2039be
