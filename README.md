@@ -150,7 +150,6 @@ You can modify the content for zodiac-related data by updating the corresponding
 
 For queries, feedback, or support, feel free to reach out:
 - Email: star.craze.service@gmail.com
-- GitHub: [Star Craze Repository](https://github.com/yourusername/star-craze)
 
 ---
 
